@@ -37,14 +37,14 @@
         <div class="col-md-12">
 
             <div class="img-container">
-                <img src="img/logo2.png" alt="">
+                <img src="img/logo.png" alt="">
             </div>
 
             <div ui-view="users" ng-cloak></div>
 
             <div ui-view="fixtures" ng-cloak></div>
 
-            <div ui-view="test" ng-cloak></div>
+            <div ui-view="fixturesUser" ng-cloak></div>
 
         </div>
 
@@ -58,7 +58,7 @@
 <!--<div class="container" role="main" ng-controller="MainCtrl">-->
 
     <!--<div class="img-container">-->
-        <!--<img src="img/logo2.png" alt="">-->
+        <!--<img src="img/logo.png" alt="">-->
     <!--</div>-->
 
     <!---->
@@ -153,8 +153,8 @@
 
 
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
@@ -162,8 +162,7 @@
 
 <script src="app/euro-app.js"></script>
 
-<script src="app/states/dashboardState.js"></script>
-<script src="app/states/dashboardUserState.js"></script>
+<script src="app/states/dashboardStates.js"></script>
 
 <script src="app/controllers/UsersListCtrl.js"></script>
 <script src="app/controllers/FixturesListCtrl.js"></script>

@@ -1,17 +1,14 @@
 angular.module('EuroAPP', [
 	'ngAnimate',
 	'ui.router',
-	'dashboardState',
-	'dashboardUserState'
+	'dashboardStates'
 ])
-	.config(function($stateProvider, $urlRouterProvider){
+	.config(function($stateProvider){
 
-		$stateProvider.state('EuroAPP', {
+		$stateProvider.state('APP', {
 			url: '',
 			abstract: true
 		});
-
-		$urlRouterProvider.otherwise('/');
 
 	})
 ;

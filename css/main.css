@@ -87,6 +87,16 @@ ng\:form {
     background: #e6e6ff;
 }
 
+.users tbody .user {
+    text-decoration: none;
+    color: #555;
+}
+
+.users tbody tr:nth-child(1) .user,
+.users tbody tr:nth-child(2) .user {
+    color: #fff;
+}
+
 .alert {
     text-align: center;
 }
@@ -195,4 +205,8 @@ button {
     position: static;
     top:0;
     left:0;
+}
+
+.back-to-dashboard {
+    width: 100%;
 }

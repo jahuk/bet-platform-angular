@@ -1,12 +1,15 @@
-<span>{{ fixturesUserListCtrl.user }}</span>
+<br>
+<button ui-sref="APP.dashboard" class="btn btn-default back-to-dashboard">back to dashboard</button>
+<br><br><br>
+
 <table class="table results">
-	<tbody>
-		<tr ng-repeat="fixture in fixturesUserListCtrl.fixtures">
-			<td> {{ fixture.homeTeamName }} </td>
-			<td> {{ fixture.result.goalsHomeTeam }} </td>
-			<td> - </td>
-			<td> {{ fixture.result.goalsAwayTeam }} </td>
-			<td> {{ fixture.awayTeamName }} </td>
-		</tr>
-	</tbody>
+    <tbody>
+    <tr ng-repeat="fixture in fixturesUserListCtrl.fixtures">
+        <td> {{ fixture.homeTeamName }} </td>
+        <td> {{ fixture.result.goalsHomeTeam }} </td>
+        <td> - </td>
+        <td> {{ fixture.result.goalsAwayTeam }} </td>
+        <td> {{ fixture.awayTeamName }} </td>
+    </tr>
+    </tbody>
 </table>
