@@ -1,4 +1,4 @@
-angular.module('EuroAPP')
+angular.module('APP')
 
 .controller('FixturesListCtrl', function FixturesListCtrl($rootScope, $state, $stateParams, $log, FixturesService) {
 	var fixtureListCtrl = this;
@@ -7,7 +7,7 @@ angular.module('EuroAPP')
 	// console.log($state, $stateParams);
 
 	$rootScope.$on('$locationChangeStart', function() {
-		console.log(userParam);
+		// console.log(userParam);
 	});
 
 	if (!userParam) {

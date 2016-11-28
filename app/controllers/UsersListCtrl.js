@@ -1,4 +1,4 @@
-angular.module('EuroAPP')
+angular.module('APP')
 
 .controller('UsersListCtrl', function UsersListCtrl($q, $log, UsersService, FixturesService) {
 	var usersListCtrl = this;

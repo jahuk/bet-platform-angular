@@ -2,6 +2,15 @@
 <button ui-sref="APP.dashboard" class="btn btn-default back-to-dashboard">back to dashboard</button>
 <br><br><br>
 
+<ul class="nav nav-pills">
+    <li class="active user-points">
+        <a href="">
+            {{ fixturesUserListCtrl.user }}
+            <span class="badge">42</span>
+        </a>
+    </li>
+</ul>
+
 <table class="table results">
     <tbody>
     <tr ng-repeat="fixture in fixturesUserListCtrl.fixtures">

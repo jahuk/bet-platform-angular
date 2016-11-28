@@ -1,4 +1,4 @@
-angular.module('EuroAPP')
+angular.module('APP')
 
 .service('UsersService', function UsersListCtrl($http, $q, $log) {
 	var model = this;
@@ -77,6 +77,10 @@ angular.module('EuroAPP')
 		var sortedUsers;
 		sortedUsers = _.sortBy(users, ['points']).reverse();
 		return sortedUsers;
+	};
+
+	model.getUserBet = function(userName, matchId) {
+		// todo
 	}
 
 });

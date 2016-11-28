@@ -1,4 +1,4 @@
-angular.module('EuroAPP')
+angular.module('APP')
 
 .service('FixturesService', function UsersListCtrl($http, $q, $log, PointsService) {
 	var model = this;

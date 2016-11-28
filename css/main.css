@@ -210,3 +210,14 @@ button {
 .back-to-dashboard {
     width: 100%;
 }
+
+.user-points {
+    width: 100%;
+    float: none !important;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+.user-points a {
+    cursor: default;
+}

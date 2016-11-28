@@ -1,4 +1,4 @@
-angular.module('EuroAPP')
+angular.module('APP')
 
 .directive('loading', ['$http', function ($http) {
 	return {

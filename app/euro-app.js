@@ -1,4 +1,4 @@
-angular.module('EuroAPP', [
+angular.module('APP', [
 	'ngAnimate',
 	'ui.router',
 	'dashboardStates'
