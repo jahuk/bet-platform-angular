@@ -79,8 +79,4 @@ angular.module('APP')
 		return sortedUsers;
 	};
 
-	model.getUserBet = function(userName, matchId) {
-		// todo
-	}
-
 });

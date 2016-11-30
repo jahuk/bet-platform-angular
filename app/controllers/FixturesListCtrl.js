@@ -4,12 +4,6 @@ angular.module('APP')
 	var fixtureListCtrl = this;
 	var userParam = $state.params.user;
 
-	// console.log($state, $stateParams);
-
-	$rootScope.$on('$locationChangeStart', function() {
-		// console.log(userParam);
-	});
-
 	if (!userParam) {
 		FixturesService.getFixtures()
 			.then(success, error);

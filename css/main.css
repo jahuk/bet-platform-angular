@@ -208,7 +208,8 @@ button {
 }
 
 .back-to-dashboard {
-    width: 100%;
+    width: 25%;
+    float: left;
 }
 
 .user-points {
