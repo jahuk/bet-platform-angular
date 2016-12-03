@@ -87,7 +87,13 @@ ng\:form {
     background: #e6e6ff;
 }
 
+.users tbody tr:hover {
+    background: #e6e6ff;
+    transition: background-color, color, 300ms linear;
+}
+
 .users tbody .user {
+    display: block;
     text-decoration: none;
     color: #555;
 }

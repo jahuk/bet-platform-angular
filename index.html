@@ -50,129 +50,25 @@
 
     </div>
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+    <script src="vendor/angular-ui-router.min.js"></script>
 
+    <script src="app/euro-app.js"></script>
 
+    <script src="app/states/dashboardStates.js"></script>
 
+    <script src="app/controllers/UsersListCtrl.js"></script>
+    <script src="app/controllers/FixturesListCtrl.js"></script>
+    <script src="app/controllers/FixturesUserListCtrl.js"></script>
 
+    <script src="app/services/UsersService.js"></script>
+    <script src="app/services/FixturesService.js"></script>
+    <script src="app/services/PointsService.js"></script>
 
-<!--<div class="container" role="main" ng-controller="MainCtrl">-->
-
-    <!--<div class="img-container">-->
-        <!--<img src="img/logo.png" alt="">-->
-    <!--</div>-->
-
-    <!---->
-    <!--<div class="loader-overlay show" ng-class="{'show': loaderVisible === true}">-->
-        <!--<div class="loader">-->
-            <!--<div class="spinner">-->
-                <!--<div class="rect1"></div>-->
-                <!--<div class="rect2"></div>-->
-                <!--<div class="rect3"></div>-->
-                <!--<div class="rect4"></div>-->
-                <!--<div class="rect5"></div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="col-md-12">-->
-
-        <!--<table class="table users">-->
-            <!--<thead>-->
-            <!--<tr>-->
-                <!--<th></th>-->
-                <!--<th>Name</th>-->
-                <!--<th>Points</th>-->
-            <!--</tr>-->
-            <!--</thead>-->
-            <!--<tbody>-->
-            <!--<tr ng-repeat="user in users">-->
-                <!--<td> {{ $index+1 }} </td>-->
-                <!--<td> {{ user.name }} </td>-->
-                <!--<td> <span class="badge">{{ user.points }} </span></td>-->
-            <!--</tr>-->
-            <!--</tbody>-->
-        <!--</table>-->
-
-    <!--</div>-->
-
-    <!--<div class="col-md-12">-->
-        <!--<div class="alert alert-info" role="alert">-->
-            <!--Games completed: <b> {{ matchesCompleted }} / 51 </b>. Max points you can get now: <b>{{ matchesCompleted * 3 }}</b>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="col-md-12">-->
-
-        <!--<form name="myForm">-->
-            <!--<select ng-model="userSelected" ng-options="user.name for user in users">-->
-                <!--<option value="">Please choose user</option>-->
-            <!--</select>-->
-            <!--<button class="btn btn-default" ng-click="userSelected=''">SHOW ALL RESULTS</button>-->
-        <!--</form>-->
-
-        <!--<br>-->
-
-        <!--<h3>Results:</h3>-->
-
-        <!--<table class="table results" ng-if="userSelected === ''">-->
-            <!--<tbody>-->
-            <!--<tr ng-repeat="result in resultsFull" ng-class="{'live': result.status === 'IN_PLAY'}">-->
-                <!--<td> {{ result.homeTeamName }} </td>-->
-                <!--<td> {{ result.result.goalsHomeTeam }} </td>-->
-                <!--<td> - </td>-->
-                <!--<td> {{ result.result.goalsAwayTeam }} </td>-->
-                <!--<td> {{ result.awayTeamName }} </td>-->
-            <!--</tr>-->
-            <!--</tbody>-->
-        <!--</table>-->
-
-        <!--<table class="table details" ng-repeat="user in users" ng-class="{'active': user.name == userSelected.name}">-->
-            <!--<thead>-->
-                <!--<tr>-->
-                    <!--<th colspan="5">{{ user.name }}</th>-->
-                    <!--<th>bet</th>-->
-                    <!--<th>points</th>-->
-                <!--</tr>-->
-            <!--</thead>-->
-            <!--<tbody>-->
-                <!--<tr ng-repeat="result in resultsFull" ng-class="{'live': result.status === 'IN_PLAY'}">-->
-                    <!--<td> {{ result.homeTeamName }} </td>-->
-                    <!--<td> <b>{{ result.result.goalsHomeTeam }}</b> </td>-->
-                    <!--<td> - </td>-->
-                    <!--<td> <b>{{ result.result.goalsAwayTeam }}</b> </td>-->
-                    <!--<td> {{ result.awayTeamName }} </td>-->
-                    <!--<td>{{ getBetByUser(allBets, user.name, $index) }}</td>-->
-                    <!--<td> <span class="badge" ng-if="result.status === 'FINISHED'">{{ getPoints(getBetByUser(allBets, user.name, $index), result.result, result.matchday) }}</span> </td>-->
-                <!--</tr>-->
-            <!--</tbody>-->
-        <!--</table>-->
-
-    <!--</div>-->
-
-<!--</div>-->
-
-
-
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
-<script src="vendor/angular-ui-router.min.js"></script>
-
-<script src="app/euro-app.js"></script>
-
-<script src="app/states/dashboardStates.js"></script>
-
-<script src="app/controllers/UsersListCtrl.js"></script>
-<script src="app/controllers/FixturesListCtrl.js"></script>
-<script src="app/controllers/FixturesUserListCtrl.js"></script>
-
-<script src="app/services/UsersService.js"></script>
-<script src="app/services/FixturesService.js"></script>
-<script src="app/services/PointsService.js"></script>
-
-<script src="app/directives/loadingDirective.js"></script>
+    <script src="app/directives/loadingDirective.js"></script>
 
 </body>
 </html>
