@@ -51,10 +51,13 @@ angular.module('APP')
 
 		_.forEach(userBets, function(userBet,index) {
 			var bet = userBet.bet;
-			var fixture = fixtures[index].bet;
-			var matchday = fixtures[index].matchday;
 
-			userPoints += PointsService.getPoints(bet, fixture, matchday);
+			if (fixtures[index]) {
+                var fixture = fixtures[index].bet;
+                var matchday = fixtures[index].matchday;
+                userPoints += PointsService.getPoints(bet, fixture, matchday);
+			}
+
 		});
 
 		return userPoints;

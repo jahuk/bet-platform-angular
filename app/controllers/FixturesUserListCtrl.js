@@ -22,14 +22,19 @@ angular.module('APP')
             fixturesUserListCtrl.userBets = userBet[0].bets;
             fixturesUserListCtrl.userPoints = fixturesUserListCtrl.userBets.map(function(obj, index){
             	var bet = obj.bet;
-            	var goalsHome = fixtures[index].result.goalsHomeTeam;
-                var goalsAway = fixtures[index].result.goalsAwayTeam;
-                var matchday = fixtures[index].matchday;
-            	var fixture = goalsHome + '-' + goalsAway;
 
-            	return PointsService.getPoints(bet, fixture, matchday);
+            	if (fixtures[index] && fixtures[index].result.goalsHomeTeam !== null) {
+                    var goalsHome = fixtures[index].result.goalsHomeTeam;
+                    var goalsAway = fixtures[index].result.goalsAwayTeam;
+                    var matchday = fixtures[index].matchday;
+                    var fixture = goalsHome + '-' + goalsAway;
+                    return PointsService.getPoints(bet, fixture, matchday);
+                } else {
+            	    return 0;
+                }
+
 			});
-
+            fixturesUserListCtrl.userResult = _.sum(fixturesUserListCtrl.userPoints);
         }
 
         function error(error) {
