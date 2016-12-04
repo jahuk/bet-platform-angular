@@ -4,4 +4,4 @@ A simple app to track bet results for UEFA EURO 2016. Using results from http://
 
 ## Motivation
 
-Learn AngularJS and have fun. 
+Learn AngularJS, track bet results and have fun. 
