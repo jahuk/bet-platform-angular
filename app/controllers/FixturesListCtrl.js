@@ -16,5 +16,4 @@ angular.module('APP')
 			$log.error('ERROR status', error.status);
 		}
 	}
-
 });

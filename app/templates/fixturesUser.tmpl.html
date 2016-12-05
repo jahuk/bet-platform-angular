@@ -24,7 +24,8 @@
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="fixture in fixturesUserListCtrl.fixtures">
+
+    <tr ng-repeat="fixture in fixturesUserListCtrl.fixtures" ui-sref="APP.match({match: $index})">
         <td> {{ fixture.homeTeamName }} </td>
         <td> {{ fixture.result.goalsHomeTeam }} </td>
         <td> - </td>

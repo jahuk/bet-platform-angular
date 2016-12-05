@@ -7,9 +7,9 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat="user in usersListCtrl.users">
+		<tr ng-repeat="user in usersListCtrl.users" ui-sref="APP.user({user: user.name})">
 			<td> {{ $index+1 }} </td>
-			<td> <a class="user" ui-sref="APP.user({user: user.name})"> {{ user.name }} </a> </td>
+			<td> <a class="user"> {{ user.name }} </a> </td>
 			<td> <span class="badge">{{ user.points }} </span></td>
 		</tr>
 	</tbody>

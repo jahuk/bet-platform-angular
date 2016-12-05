@@ -47,6 +47,15 @@ ng\:form {
 
 }
 
+.results tbody tr {
+    cursor: pointer;
+}
+
+.results tbody tr:hover {
+    background: #e6e6ff;
+    transition: background-color, color, 300ms linear;
+}
+
 .results td:nth-child(1),
 .results td:nth-child(2) {
     text-align: right;
@@ -71,6 +80,10 @@ ng\:form {
     background-color: #ccccff;
     animation: bg-color 3s infinite;
     color: red;
+}
+
+.users tbody tr {
+    cursor: pointer;
 }
 
 .users tbody tr:nth-child(1) {

@@ -25,6 +25,15 @@ angular.module('dashboardStates', [])
                         templateUrl: 'app/templates/fixturesUser.tmpl.html'
                     }
                 }
-            });
+            })
+			.state('APP.match', {
+				url: '/match/:match',
+				views: {
+                    'match@': {
+                        controller: 'MatchListCtrl as matchListCtrl',
+                        templateUrl: 'app/templates/match.tmpl.html'
+                    }
+				}
+			});
 
 	});
