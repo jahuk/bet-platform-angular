@@ -3,3 +3,28 @@
 <button ui-sref="APP.dashboard" class="btn btn-default back-to-dashboard">back to dashboard</button>
 
 <br><br><br>
+
+<div class="alert alert-dismissible alert-info">
+    <strong>team 1 VS team 2</strong>
+    <br>
+    <strong>score: {{ matchListCtrl.result }}</strong>
+</div>
+
+<table class="table users">
+    <thead>
+    <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Bet</th>
+        <th>Points</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="user in matchListCtrl.users" ui-sref="APP.user({user: user.name})">
+        <td> {{ $index+1 }} </td>
+        <td> <a class="user"> {{ user.name }} </a> </td>
+        <td> {{ user.bet }} </td>
+        <td> <span class="badge">{{ user.points }} </span></td>
+    </tr>
+    </tbody>
+</table>
