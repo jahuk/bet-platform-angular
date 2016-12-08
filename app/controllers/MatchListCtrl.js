@@ -6,14 +6,18 @@ angular.module('APP')
 
         $q.all([
             UsersService.getUsers(),
-            FixturesService.getPureFixtures()
+            FixturesService.getFixtures()
         ]).then(success, error);
 
         function success(response) {
             var users = response[0];
             var fixtures = response[1];
 
-            var fixture = fixtures[matchId].bet;
+            var match = fixtures[matchId];
+            var goalsHome = match.result.goalsHomeTeam;
+            var goalsAway = match.result.goalsAwayTeam;
+
+            var fixture = goalsHome + '-' + goalsAway;
             var matchday = fixtures[matchId].matchday;
 
             matchListCtrl.users = users;
@@ -27,6 +31,8 @@ angular.module('APP')
                 matchListCtrl.users[userId].points = PointsService.getPoints(bet, fixture, matchday);
             });
 
+            matchListCtrl.homeTeamName = match.homeTeamName;
+            matchListCtrl.awayTeamName = match.awayTeamName;
             matchListCtrl.result = fixture;
             matchListCtrl.users = UsersService.sortUsers(matchListCtrl.users);
         }
