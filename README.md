@@ -11,7 +11,6 @@ Learn AngularJS, track bet results and have fun.
 ### Fixtures
 - app use results from http://api.football-data.org/index,
 - endpoint for UEFA EURO 2016 results: http://api.football-data.org/v1/soccerseasons/424/fixtures,
-
 - example
 ```json
 "_links": {
@@ -60,7 +59,6 @@ Learn AngularJS, track bet results and have fun.
 - each user bet result using json file,
 - json could be prepare manually or generated from for example excel etc,
 - each user has a separate file,
-
 - example:
 ```json
 {
@@ -80,7 +78,7 @@ Learn AngularJS, track bet results and have fun.
 ```
 
 ### Results
-- there is a special rule to calculate points (check getPoints method from (app/services/PointsService.js)),
+- there is a special rule to calculate points (check getPoints method from [PointsService](app/services/PointsService.js)),
 - in general user get from 0 do 6 points for match (depends on match day),
 - base on fixtures and user bets application generate rankings
 
