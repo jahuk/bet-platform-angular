@@ -82,3 +82,16 @@ Learn AngularJS, track bet results and have fun.
 * in general user get from 0 do 6 points for match (depends on match day),
 * base on fixtures and user bets application generate rankings
 
+## Views
+
+### Dashboard
+
+![dashboard](img/screens/dashboard.png)
+
+### User 
+
+![user](img/screens/user.png)
+
+### Match
+
+![match](img/screens/match.png)
