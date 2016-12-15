@@ -1,13 +1,13 @@
 <h2>Results:</h2>
 
 <table class="table results">
-	<tbody>
-		<tr ng-repeat="fixture in fixturesListCtrl.fixtures" ui-sref="APP.match({match: $index})">
-			<td> {{ fixture.homeTeamName }} </td>
-			<td> {{ fixture.result.goalsHomeTeam }} </td>
-			<td> - </td>
-			<td> {{ fixture.result.goalsAwayTeam }} </td>
-			<td> {{ fixture.awayTeamName }} </td>
-		</tr>
-	</tbody>
+    <tbody>
+    <tr ng-repeat="fixture in fixturesListCtrl.fixtures" ui-sref="APP.match({match: $index})">
+        <td> {{ fixture.homeTeamName }}</td>
+        <td> {{ fixture.result.goalsHomeTeam }}</td>
+        <td> -</td>
+        <td> {{ fixture.result.goalsAwayTeam }}</td>
+        <td> {{ fixture.awayTeamName }}</td>
+    </tr>
+    </tbody>
 </table>

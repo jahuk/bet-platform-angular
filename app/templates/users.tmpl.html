@@ -1,16 +1,16 @@
 <table class="table users">
-	<thead>
-		<tr>
-			<th></th>
-			<th>Name</th>
-			<th>Points</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr ng-repeat="user in usersListCtrl.users" ui-sref="APP.user({user: user.name})">
-			<td> {{ $index+1 }} </td>
-			<td> <a class="user"> {{ user.name }} </a> </td>
-			<td> <span class="badge">{{ user.points }} </span></td>
-		</tr>
-	</tbody>
+    <thead>
+    <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Points</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="user in usersListCtrl.users" ui-sref="APP.user({user: user.name})">
+        <td> {{ $index+1 }}</td>
+        <td><a class="user"> {{ user.name }} </a></td>
+        <td><span class="badge">{{ user.points }} </span></td>
+    </tr>
+    </tbody>
 </table>

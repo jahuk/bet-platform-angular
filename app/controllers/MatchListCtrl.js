@@ -22,7 +22,7 @@ angular.module('APP')
 
             matchListCtrl.users = users;
 
-            _.forEach(users, function(user, index) {
+            _.forEach(users, function (user, index) {
                 var userId = index;
                 var userBets = user.bets;
                 var bet = userBets[matchId].bet;

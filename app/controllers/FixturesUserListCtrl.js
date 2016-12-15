@@ -14,26 +14,26 @@ angular.module('APP')
         function success(response) {
             var users = response[0];
             var fixtures = response[1];
-            var userBet = users.filter(function(obj){
-				return obj.name === user;
-			});
+            var userBet = users.filter(function (obj) {
+                return obj.name === user;
+            });
 
             fixturesUserListCtrl.fixtures = fixtures;
             fixturesUserListCtrl.userBets = userBet[0].bets;
-            fixturesUserListCtrl.userPoints = fixturesUserListCtrl.userBets.map(function(obj, index){
-            	var bet = obj.bet;
+            fixturesUserListCtrl.userPoints = fixturesUserListCtrl.userBets.map(function (obj, index) {
+                var bet = obj.bet;
 
-            	if (fixtures[index] && fixtures[index].result.goalsHomeTeam !== null) {
+                if (fixtures[index] && fixtures[index].result.goalsHomeTeam !== null) {
                     var goalsHome = fixtures[index].result.goalsHomeTeam;
                     var goalsAway = fixtures[index].result.goalsAwayTeam;
                     var matchday = fixtures[index].matchday;
                     var fixture = goalsHome + '-' + goalsAway;
                     return PointsService.getPoints(bet, fixture, matchday);
                 } else {
-            	    return 0;
+                    return 0;
                 }
 
-			});
+            });
             fixturesUserListCtrl.userResult = _.sum(fixturesUserListCtrl.userPoints);
         }
 
